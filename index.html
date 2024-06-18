@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="origin-trial"
+    content="AoAkdLCU4zwz+6Ud8y8I4y19ncuugMPI206kc4xymav/riExVq5L3Bigg4rDWyC8EPMY/qgb+1UqeJyLu+6RxQMAAABReyJvcmlnaW4iOiJodHRwczovL2pycHJpY2UuZ2l0aHViLmlvOjQ0MyIsImZlYXR1cmUiOiJXZWJHUFUiLCJleHBpcnkiOjE2OTE3MTE5OTl9">
+  <title>NBody-WebGPU</title>
+</head>
+
+<body style="overflow: hidden; margin: 0; font-size: 140%;">
+  <div name="options" style="font-weight: bold; color: white; position: absolute; margin-left: 5px; line-height: 150%;">
+    <label id="fps" style="font-weight: bold; color: lime"></label>
+    <br />
+    <label for="powerpref">Power preference:</label>
+    <select name="powerpref" id="powerpref" style="font-size: 80%;" onkeydown="return false">
+      <option value="high-performance" selected="selected">high-performance</option>
+      <option value="low-power">low-power</option>
+    </select>
+    <br />
+    <label for="numbodies">Number of bodies:</label>
+    <select name="numbodies" id="numbodies" style="font-size: 80%;" onkeydown="return false">
+      <option value="65536">65536</option>
+      <option value="32768">32768</option>
+      <option value="16384" selected="selected">16384</option>
+      <option value="8192">8192</option>
+      <option value="4096">4096</option>
+      <option value="2048">2048</option>
+      <option value="1024">1024</option>
+      <option value="512">512</option>
+      <option value="256">256</option>
+    </select>
+    <br />
+    <label for="wgsize">Workgroup size:</label>
+    <select name="wgsize" id="wgsize" style="font-size: 80%;" onkeydown="return false">
+      <option value="256">256</option>
+      <option value="128">128</option>
+      <option value="64" selected="selected">64</option>
+      <option value="32">32</option>
+      <option value="16">16</option>
+      <option value="4">4</option>
+      <option value="2">2</option>
+      <option value="1">1</option>
+    </select>
+    <br />
+    <button id="reset" style="font-size: 80%;" onkeydown="return false">Reset</button>
+    <button id="pause" style="font-size: 80%;" onkeydown="return false">Pause</button>
+  </div>
+  <div name="controls"
+    style="font-weight: bold; color: white; margin: 5px; margin-right: 15px; position: absolute; right: 0; line-height: 120%;">
+    Move camera with &uarr; &darr;
+    <br />
+    Press spacebar to pause
+  </div>
+  <div style="position: absolute; right: 0; bottom: 0; margin: 10px">
+    <a href="https://github.com/jrprice/NBody-WebGPU" target="_blank">
+      <button id="github" style="font-size: 100%;">View on Github</button>
+    </a>
+  </div>
+  <div>
+    <canvas id="canvas"></canvas>
+    <script type="module" src="dist/nbody.js"></script>
+  </div>
+</body>
+
+</html>
